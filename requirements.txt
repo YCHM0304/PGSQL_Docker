@@ -1,0 +1,5 @@
+akasha-terminal==0.8.45
+psycopg2-binary==2.9.9
+pandas==2.2.2
+pymssql==2.3.0
+mysql-connector-python==9.0.0
