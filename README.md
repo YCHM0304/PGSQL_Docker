@@ -1,6 +1,17 @@
 # PGSQL_Docker
 > A practice of using docker to create a Postgresql container and import the content of a csv file into the database by using Python. Finally, test whether `db_query_test.py` which is used to query the data and input the data into GPT-4 model to generate the correct answer can fetch the data from the database normally. 
 
+- [PGSQL\_Docker](#pgsql_docker)
+  - [Docker Image](#docker-image)
+  - [Docker Container](#docker-container)
+    - [Create and run the container](#create-and-run-the-container)
+    - [Create a database](#create-a-database)
+  - [Python Script](#python-script)
+    - [Install the required packages](#install-the-required-packages)
+    - [Run the script](#run-the-script)
+    - [Test the script](#test-the-script)
+
+
 ## Docker Image
 I personally install the docker into Ubuntu 20.04 which is running on wsl2. 
 
@@ -26,7 +37,7 @@ docker run --name <your container name> -e POSTGRES_PASSWORD=<password> -d -p <p
 ### Create a database
 Run the following command to create a database.
 ```bash
-docker exec -it my-postgres psql -U postgres -c "create database <database-name> owner <user-name>""
+docker exec -it my-postgres psql -U postgres -c "create database <database-name> owner <user-name>"
 ```
 - `database-name`: Set the name of the database you want to create.
 - `user-name`: Set the name of the user who owns the database.
