@@ -13,12 +13,23 @@ docker pull postgres
 ```
 
 ## Docker Container
+
+### Create and run the container
 Run the following command to create a Postgresql container.
 ```bash
-docker run --name <your container name> -e POSTGRES_PASSWORD=<password> -d -p 5432:5432 postgres
+docker run --name <your container name> -e POSTGRES_PASSWORD=<password> -d -p <port>:5432(default= 5432:5432) postgres postgres
 ```
-- `<your container name>`: Set the name of the container you want to create.
-- `<password>`: Set the password of the superuser of the Postgresql database.
+- `your container name`: Set the name of the container you want to create.
+- `password`: Set the password of the superuser of the Postgresql database.
+- `port`: Set the port of the local machine. 
+
+### Create a database
+Run the following command to create a database.
+```bash
+docker exec -it my-postgres psql -U postgres -c "create database <database-name> owner <user-name>""
+```
+- `database-name`: Set the name of the database you want to create.
+- `user-name`: Set the name of the user who owns the database.
 
 ## Python Script
 
