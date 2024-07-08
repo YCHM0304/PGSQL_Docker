@@ -13,12 +13,12 @@ docker pull postgres
 ```
 
 ## Docker Container
-執行以下指令即可建立一個Postgresql的container。
+Run the following command to create a Postgresql container.
 ```bash
 docker run --name <your container name> -e POSTGRES_PASSWORD=<password> -d -p 5432:5432 postgres
 ```
-- `<your container name>`: 設定container的名稱。
-- `<password>`: 設定超級使用者(postgres)的密碼。
+- `<your container name>`: Set the name of the container you want to create.
+- `<password>`: Set the password of the superuser of the Postgresql database.
 
 ## Python Script
 
